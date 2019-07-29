@@ -22,7 +22,7 @@ def index(request):
 
 def sobre(request):
     #essa página vai listar as ideias e seus criadores
-    ideias = Ideia.objects.all()
+    ideias = Ideia.objects.filter(ativo=True).all()
     contexto = {
         'ideias':ideias
     }
@@ -37,7 +37,7 @@ def login(request):
         email_form = request.POST.get('email')
         pessoa = Pessoa.objects.filter(email=email_form).first()
 
-        print('Iae meu bom amigo ', pessoa)
+        print('Iae meu bom amigo', pessoa)
 
         if pessoa is None:
             #mandar para página de cadastro
@@ -65,5 +65,14 @@ def cadastrar_ideia(request):
             print('uhuuu')
 
             return redirect('/sobre') 
-
+            
     return render(request, 'ideias.html', {}) 
+
+def remover_ideia(request, id):
+    ideia=Ideia.objects.filter(id=id).first()
+    if ideia is not None:
+        ideia.ativo=False
+        ideia.save()
+        return redirect('/sobre')
+    return render(request,'/sobre.html')
+
