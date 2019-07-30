@@ -34,6 +34,10 @@ div{
     background-color: white;
     text-align: center;
 }
+.text{
+    text-align: center;
+    background-color: #f1f1f1;
+}
 
 header, footer{
     background-color: #7ac5f1;
