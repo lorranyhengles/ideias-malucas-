@@ -2,8 +2,10 @@
 {% block conteudo %}
 
 <h1>Ideias Malucas</h1>
+<div>
 <h2>Cadastre-se</h2>
 {{msg}}
+
 <form action="/" method="post">
     {% csrf_token %}
     <label>Nome</label>
@@ -17,6 +19,7 @@
 
     <label for="">Gênero</label>
     <select name="genero" required>
+        <option value=" ">Selecione</option>
         <option value="F">Feminino</option>
         <option value="M">Masculino</option>
         <option value="O">Outro</option>
@@ -28,5 +31,5 @@
 
     <input type="submit" value="Cadastrar">
 </form>
-
+</div>
 {% endblock %}

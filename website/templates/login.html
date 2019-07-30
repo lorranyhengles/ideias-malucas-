@@ -4,11 +4,12 @@
 
 <h1>Login</h1>
 <p>{{msg}}</p>
-
+<p><iframe src="https://giphy.com/embed/3o7abKhOpu0NwenH3O" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/spongebob-cartoon-nickelodeon-thumbs-3o7abKhOpu0NwenH3O"></a></p></p>
+<div>
 <form action="/login" method="post">
     {% csrf_token %}
     <input type="email" name="email" placeholder="E-mail">
     <input type="submit" value="Enviar">
 </form>
-
+</div>
 {% endblock %}

@@ -1,12 +1,41 @@
 body{
     background-color: #f1f1f1;
     color: #db35e0;
+    font-family:'Capriola', sans-serif;
+    margin: 0;
    
+}
+h1{
+    font-family: 'Sofia', cursive;
+}
+h1, h2{
+    text-align: center;
+}
+label{
+    border-radius: 20px;
 }
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: left;
-    width: 60%;;
+    margin: 10px;
+    border-radius: 20px;
+}
+div{
+    background-color: #7ac5f1;
+    border-radius: 10px;
+    margin-right:20%;
+    margin-left: 20%;
+    margin-top: 5px;
+}
+.lista{
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+}
 
+header, footer{
+    background-color: #7ac5f1;
+    height: 50px;
 }
